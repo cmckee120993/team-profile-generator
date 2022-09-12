@@ -5,10 +5,11 @@ const Engineer = require('./lib/Engineer');
 const Employee = require('./lib/Employee');
 const fs = require('fs');
 const createSite = require('./createSite');
+const path = require('path');
 
 const teamArray =[];
-const engineers =[];
-const interns =[];
+// const engineers =[];
+// const interns =[];
 
 class Prompt {
     constructor() {
@@ -73,9 +74,9 @@ function createIntern() {
             },
             ]).then(function(answers) {
             console.log(answers);
-            const newIntern = new Intern(answers.id, answers.email, answers.name, answers.school);
             const {id, email, name, school} = answers;
-            interns.push(newIntern);
+            const newIntern = new Intern(answers.id, answers.email, answers.name, answers.school);
+            teamArray.push(newIntern);
             
 
             createTeam();
@@ -108,7 +109,7 @@ function createEngineer() {
             console.log(answers);
             const {id, email, name, gitHub} = answers;
             const newEngineer = new Engineer(answers.id, answers.email, answers.name, answers.gitHub);
-            engineers.push(newEngineer);
+            teamArray.push(newEngineer);
             createTeam();
         })
     };
@@ -131,17 +132,22 @@ function createTeam() {
                     createEngineer();
                 break;
                 case 'None':
-                    teamArray.push(engineers, interns);
-                    console.log(teamArray);
-                    const site = createSite(teamArray);
-                    writeToFile('index.html', site);
-                 break;
+                    const employeeProfile = createSite(teamArray);
+                    // writeToFile('index.html', employeeProfile);
+                    fs.writeFile(path.join(process.cwd(), '/dist/assets', 'index.html'), employeeProfile, function(err) {
+                        if (err) {
+                          return err;
+                        } else {
+                          console.log('Your index.html has been succesfully generated.')
+                        };
+                      });
+                      break;
             };
         });
 };
 
-function writeToFile() {
-fs.writeFile(path.join(process.cwd(), '/dist', fileName), data, function(err) {
+function writeToFile(fileName, data) {
+fs.writeFile(path.join(process.cwd(), '/dist/assets', fileName), data, function(err) {
     if (err) {
       return err;
     } else {
