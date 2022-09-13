@@ -29,7 +29,7 @@ function createSite(data) {
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${manager.getID()}</li>
-                            <li class="list-group-item">Email: ${manager.getEmail()}</li>
+                            <li class="list-group-item">Email:<a href="maialto:${manager.getEmail()}"> ${manager.getEmail()}</a></li>
                             <li class="list-group-item">Office: ${manager.getOfficeNumber()}</li>
                         </ul>
                     </div> 
@@ -45,8 +45,8 @@ function createSite(data) {
                         </div>
                        <ul class="list-group list-group-flush">
                            <li class="list-group-item">ID: ${engineer.getID()}</li>
-                            <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-                           
+                            <li class="list-group-item">Email:<a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+                           <li class="list-group-item">GitHub: <a href="github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a></li>
                         </ul>
                     </div>
                 </article>`;
@@ -61,7 +61,7 @@ function createSite(data) {
                          </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${intern.getID()}</li>
-                            <li class="list-group-item">Email: ${intern.getEmail()}</li>
+                            <li class="list-group-item">Email:<a href="mailto:${intern.getEmail()}"> ${intern.getEmail()}</a></li>
                             <li class="list-group-item">School: ${intern.getSchool()}</li>
                         </ul>
                     </div>

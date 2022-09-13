@@ -7,3 +7,12 @@ header {
   background-color: rgb(1, 1, 152);
   color: white;
 }
+
+.card {
+  margin: 5px;
+  align-items: center;
+}
+
+section {
+  justify-content: center;
+}
