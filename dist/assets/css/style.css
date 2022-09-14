@@ -16,3 +16,8 @@ header {
 section {
   justify-content: center;
 }
+
+img {
+  height: 100px;
+  width: 100px;
+}

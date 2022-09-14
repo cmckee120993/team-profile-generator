@@ -25,7 +25,7 @@ function createSite(data) {
                     <div class="card" style="width: 18rem;">
                         <div class="card-header">
                             <h2 class="card-title">${manager.getName()}</h2>
-                            <h3 class="card-title">${manager.getRole()}</h3>
+                            <h3 class="card-title"><img href="./images/manager-icon.png"/>${manager.getRole()}</h3>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${manager.getID()}</li>
@@ -41,7 +41,7 @@ function createSite(data) {
                     <div class="card" style="width: 18rem;">
                          <div class="card-header">
                             <h2 class="card-title">${engineer.getName()}</h2>
-                            <h3 class="card-title">${engineer.getRole()}</h3>
+                            <h3 class="card-title"><img src="./images/engineer-icon.jpeg"/>${engineer.getRole()}</h3>
                         </div>
                        <ul class="list-group list-group-flush">
                            <li class="list-group-item">ID: ${engineer.getID()}</li>
@@ -57,7 +57,7 @@ function createSite(data) {
                      <div class="card" style="width: 18rem;">
                         <div class="card-header">
                             <h2 class="card-title">${intern.getName()}</h2>
-                            <h3 class="card-title">${intern.getRole()}</h3>
+                            <h3 class="card-title"><img href="./images/intern-icon.png"/>${intern.getRole()}</h3>
                          </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${intern.getID()}</li>
