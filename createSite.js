@@ -10,7 +10,7 @@ function createSite(data) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <title>My Team</title>
     </head>
     <body>
@@ -25,7 +25,7 @@ function createSite(data) {
                     <div class="card" style="width: 18rem;">
                         <div class="card-header">
                             <h2 class="card-title">${manager.getName()}</h2>
-                            <h3 class="card-title"><img src="./images/manager-icon.png"/>${manager.getRole()}</h3>
+                            <h3 class="card-title"><img src="./assets/images/manager-icon.png"/>${manager.getRole()}</h3>
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${manager.getID()}</li>
@@ -41,7 +41,7 @@ function createSite(data) {
                     <div class="card" style="width: 18rem;">
                          <div class="card-header">
                             <h2 class="card-title">${engineer.getName()}</h2>
-                            <h3 class="card-title"><img src="./images/engineer-icon.jpeg"/>${engineer.getRole()}</h3>
+                            <h3 class="card-title"><img src="./assets/images/engineer-icon.jpeg"/>${engineer.getRole()}</h3>
                         </div>
                        <ul class="list-group list-group-flush">
                            <li class="list-group-item">ID: ${engineer.getID()}</li>
@@ -57,7 +57,7 @@ function createSite(data) {
                      <div class="card" style="width: 18rem;">
                         <div class="card-header">
                             <h2 class="card-title">${intern.getName()}</h2>
-                            <h3 class="card-title"><img src="./images/intern-icon.png"/>${intern.getRole()}</h3>
+                            <h3 class="card-title"><img src="./assets/images/intern-icon.png"/>${intern.getRole()}</h3>
                          </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">ID: ${intern.getID()}</li>
