@@ -19,6 +19,6 @@ This project allows a software/web development team to create a profile for each
 
 ## Site in Action
 
-[![Watch the video]](./dist/assets/team-generator.png)](https://drive.google.com/file/d/14lF5ua3bx_QHzw7dYPUxm4kX1Agvw18j/view)
+[![Watch the video](./dist/assets/images/team-generator.png)](https://drive.google.com/file/d/14lF5ua3bx_QHzw7dYPUxm4kX1Agvw18j/view)
 
 Click on the screenshot above to be taken to a video recording of this project in action.
